@@ -1,0 +1,159 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Dashboard</title>
+<link href="dashboard.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+    <nav id="navbar">
+        <h3>Laundry Management System</h3>
+	    <header>Dashboard</header>
+        <ul>
+            <li><a class="nav-link" href="#request">Request Status</a></li>
+            <li><a class="nav-link" href="#lrequest">Laundry Request</a></li>
+            <li><a class="nav-link" href="update.html">Update Profile</a></li>
+        </ul>
+    </nav>
+    <main id="main">
+        
+        <section id="request">
+            <header>Dashboard / Overview</header>
+                <article>
+
+                    <h3>Laundry price list(per unit)</h3>
+                    <div>
+                        <table id="price">
+                        <tr>
+                            <th>Items</th>  
+                            <th>Price</th>
+                        </tr>
+                        <tr>
+                            <td>Top wear laundry price</td>
+                            <td>₹15</td>
+                        </tr>
+                        <tr>
+                            <td>Bottom wear laundry price</td>
+                            <td>₹30</td>
+                        </tr>
+                        <tr>
+                            <td>Saree laundry price</td>
+                            <td>₹40</td>
+                        </tr>
+                        <tr><td>Winter wear laundry price</td>
+                            <td>₹50</td>
+                        </tr>
+                        <tr>
+                            <td>Others(if any)</td>
+                            <td>₹100</td>
+                        </tr>
+                        <tr>
+                            <td>Drywash price</td>
+                            <td>₹200</td>
+                        </tr>
+                        </table>
+                    </div>
+                </article>
+            </header>
+        </section>
+
+        <section id="lrequest">
+            <article>
+                <form id="req-form" method="post">
+                    <div><input id="uid" type="hidden" type="number" value="null" /></div>
+                    <table id="order">
+                        <tr>
+                          <th>Pickup Date</th>
+                          <th><input type="date" id="pdate" required></th>
+                        </tr>
+                        <tr>
+                          <th>Drop-off Date</th>
+                          <th><input type="date" id="ddate" required></th>
+                        </tr>
+                        <tr>
+                          <th>Top wear</th>
+                          <th>
+                            <select name="topwear" id="tWear">
+                                <option>---Select---</option>
+                                <option>1.Formal Shirts</option>
+                                <option>2.Casual Shirts</option>
+                                <option>3.Women's wear Casuals</option>
+                                <option>4.Women's wear Formals</option>
+                                <option>5.T-Shirts</option>
+                                <option>6.Ceremonial wear</option>
+                                <option>7.Jeans</option>
+                                <option>8.Hoddies</option>
+                                <option>Others</option>
+                          </select>
+                            
+                        </tr>
+                        <tr>
+                          <th>Bottom wear</th>
+                          <th>
+                            <select name="bottomwear" id="bWear">
+                                <option>---Select---</option>
+                                <option>1.Joggers</option>
+                                <option>2.shorts</option>
+                                <option>3.Pants</option>
+                                <option>4.Jeggings</option>
+                                <option>5.Jeans(all types)</option>
+                                <option>6.Trousers</option>
+                                <option>7.Chivas</option>
+                                <option>8.Formals</option>
+                                <option>Others</option>
+                          </select>
+                        </tr>
+                        
+                        <tr>
+                          <th>Winter wear</th>
+                          <th>
+                            <select name="winterwear" id="wcloth">
+                                <option>---Select---</option>
+                                <option>1.Jeans Jackets</option> 
+                                <option>2.Woollen Jackets</option>
+                                <option>3.Half Jacket</option>
+                                <option>4.Mufflers</option>
+                                <option>5.Sock</option>
+                                <option>6.Blankets</option>
+                                <option>Others</option>
+                            </select>
+                            </th>
+                        </tr>
+                        <tr>
+                            <th>Saree</th>
+                            <th><input id="saree" type="text"></th>
+                          </tr>
+                        <tr>
+                          <th>Others</th>
+                          <th><input id="other" type="text"></th>
+                        </tr>
+                        <tr>
+                          <th>Service type</th>
+                          <th>
+                            <select name="service" id="service">
+                                <option>---Select---</option>
+                                <option>1.Wet-Wash</option>
+                                <option>1.Petrol-Wash</option>
+                                <option>2.Dry-Wash</option>
+                            </select>
+                          </th>
+                        </tr>
+                        <tr>
+                            <th>Description(if any)</th>
+                            <th><input id="descr" type="text"></th>
+                        </tr>
+                      </table>
+                    <button id="submit" type="submit" value="Send" onclick="orderDetails()">Submit</button>
+                </form>
+                <script src="dashboard.js"></script>
+            </article>
+        </section>
+
+        <footer>
+            <p>Copyright © 2022 | Laundry Management System | Privacy Policy</p>
+            <p>*Terms & Conditions</p>
+        </footer>
+    </main>
+
+</body>
+</html>
